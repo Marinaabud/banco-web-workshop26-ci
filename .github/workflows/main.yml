@@ -30,10 +30,10 @@ jobs:
         
       #     [execucao da aplicacao fe/be]
       - name: Iniciando o servidor mocks
-        run: nom run mock-server
+        run: npm run mock-server &
 
       - name: Iniciar o servidor de aplicacao
-        run: npm run server
+        run: npm run server &
 
       - name: Executando os testes do projeto
-        run: npx cypress run
+        run: npx cypress run 
